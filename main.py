@@ -13,13 +13,28 @@ from selenium.webdriver.support import expected_conditions as EC
 from webdriver_manager.chrome import ChromeDriverManager
 from utils import check_and_click_close_popup, countdown_timer, smooth_scroll_to, human_like_scroll
 
-# Ask for city and keyword inputs
-city = input("Enter the city name: ").replace(' ', '-')
-keyword = input("Enter the search keyword: ").replace(' ', '-')
+def get_url_input():
+    # Ask the user if they have a URL or need to enter city/keyword
+    print("Select an option:")
+    print("1. Provide a URL")
+    print("2. Enter City/Keyword")
+    choice = input("Enter the number of your choice (1 or 2): ").strip()
 
-# Generate URL based on inputs
-base_url = "https://www.justdial.com/"
-url = f"{base_url}{city}/{keyword}/"
+    if choice == '1':
+        url = input("Enter the URL: ").strip()
+    elif choice == '2':
+        city = input("Enter the city name: ").replace(' ', '-')
+        keyword = input("Enter the search keyword: ").replace(' ', '-')
+        base_url = "https://www.justdial.com/"
+        url = f"{base_url}{city}/{keyword}/"
+    else:
+        print("Invalid choice. Exiting.")
+        exit()
+
+    return url
+
+# Get the URL input from the user
+url = get_url_input()
 
 # Set up Chrome options
 chrome_options = Options()
@@ -69,7 +84,7 @@ try:
     os.makedirs('Scrapped', exist_ok=True)
 
     # Find and save data in CSV
-    csv_filename = os.path.join('Scrapped', f"{keyword}.csv")
+    csv_filename = os.path.join('Scrapped', f"{url.split('/')[-2]}.csv")
     with open(csv_filename, 'w', newline='', encoding='utf-8') as csvfile:
         fieldnames = ['Name', 'Address', 'Phone']
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
@@ -104,7 +119,7 @@ except Exception as e:
 
 finally:
     # Print script completion message
-    print("Script execution completed. Browser will remain open.")
+    print("Script execution completed.")
     
     # Wait for 3 seconds
     time.sleep(3)
@@ -116,7 +131,5 @@ finally:
         os.remove('stop.txt')
     if os.path.exists('error_log.txt'):
         os.remove('error_log.txt')
-    
-    # Keep the browser open, looping indefinitely until manually closed
-    while True:
-        time.sleep(10)
+    print("Deleted Logs")
+
