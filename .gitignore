@@ -1,0 +1,19 @@
+# Ignore the Scrapped folder
+Scrapped/
+
+# Ignore the page_source.html file
+page_source.html
+stop.txt
+error_log.txt
+
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+
+
+# Other files and directories to ignore
+*.log
+*.db
+*.sqlite3
+*.DS_Store
