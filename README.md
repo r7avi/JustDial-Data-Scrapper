@@ -1,6 +1,8 @@
-# Web Scraping Script
+# JustDial Data Scraping Script
 
 This script uses Selenium to scrape data from Justdial. It automates the process of opening a webpage, handling popups, scrolling, and extracting contact information, then saves the data into a CSV file.
+
+It currently scraps Name, Address and Phone numbers from given city and keyword
 
 ## Features
 
