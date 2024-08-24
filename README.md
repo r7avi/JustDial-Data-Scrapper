@@ -30,9 +30,8 @@ Before running the script, make sure you have the following installed:
    cd JustDial-Data-Scrapper
    pip install -r requirements.txt
 
+## Screenshots 
 
-### Summary:
-- **Installation Instructions**: Consolidated into a single step that includes cloning the repository and installing the requirements.
-- **Execution**: Clear, concise instructions for running the script.
+   ![image](https://github.com/user-attachments/assets/db720fd4-a662-4571-bcca-44fe20f242aa)
+   ![image](https://github.com/user-attachments/assets/02af2345-6095-4a33-a229-ead54046abd5)
 
-This approach keeps the `README.md` streamlined and user-friendly.
