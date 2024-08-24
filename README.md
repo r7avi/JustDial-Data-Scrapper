@@ -25,8 +25,8 @@ These packages are listed in the `requirements.txt` file.
 First, clone the repository to your local machine and install the required packages:
 
 ```sh
-git clone https://github.com/your-username/your-repository.git
-cd your-repository
+git clone [https://github.com/your-username/your-repository](https://github.com/r7avi/JustDial-Data-Scrapper.git)
+cd Just Dail Scrapper
 pip install -r requirements.txt
 
 
