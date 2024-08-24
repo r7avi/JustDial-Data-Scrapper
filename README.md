@@ -1,30 +1,29 @@
-# Web Scraper Script
+# Web Scraping Script
 
-This Python script automates the process of scraping contact information from a specified website using the Selenium library with Google Chrome. The script handles pop-ups, performs human-like scrolling, and extracts data like names and phone numbers.
+This script uses Selenium to scrape data from Justdial. It automates the process of opening a webpage, handling popups, scrolling, and extracting contact information, then saves the data into a CSV file.
 
 ## Features
 
-- **Pop-up Handling**: Automatically detects and closes pop-ups that might interfere with the scraping process.
-- **Human-like Scrolling**: The script scrolls the page incrementally to mimic a real user's behavior, ensuring that dynamically loaded content is captured.
-- **Countdown Timer**: A countdown timer runs in a separate thread, creating a stop file after a specified time to halt the scrolling.
-- **Data Extraction**: Scrapes and saves contact information (e.g., names and phone numbers) to a text file.
+- **Dynamic URL Generation:** Constructs the URL based on user input for city and keyword.
+- **Popup Handling:** Automatically closes certain popups that may interfere with scraping.
+- **Human-like Scrolling:** Scrolls the page smoothly to load more content.
+- **Data Extraction:** Collects names, addresses, and phone numbers.
+- **Data Saving:** Saves the extracted data in a CSV file within a `Scrapped` folder, named after the search keyword.
 
-## Requirements
+## Prerequisites
 
-The script requires Python 3.x and the following Python packages:
+Before running the script, make sure you have the following installed:
 
-- `selenium`: For automating web browser interactions.
-- `webdriver_manager`: To automatically manage and download the ChromeDriver executable.
-
-These packages are listed in the `requirements.txt` file.
+- Python 3.x
+- pip (Python package installer)
 
 ## Installation
 
-### 1. Clone the Repository and Install Requirements
+1. **Clone or Download the Repository**
 
-First, clone the repository to your local machine and install the required packages:
+   Clone the repository to your local machine or download the script file.
 
-```sh
+   ```bash
 git clone https://github.com/r7avi/JustDial-Data-Scrapper.git
 cd Just Dail Scrapper
 pip install -r requirements.txt
