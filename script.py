@@ -10,8 +10,13 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from webdriver_manager.chrome import ChromeDriverManager
 
-# Prompt for the URL
-url = input("Enter the URL to scrape: ")
+# Ask for city and keyword inputs
+city = input("Enter the city name: ").replace(' ', '-')
+keyword = input("Enter the search keyword: ").replace(' ', '-')
+
+# Generate URL based on inputs
+base_url = "https://www.justdial.com/"
+url = f"{base_url}{city}/{keyword}/"
 
 # Set up Chrome options
 chrome_options = Options()
@@ -53,7 +58,7 @@ def countdown_timer(seconds):
         f.write('')
 
 # Start the countdown timer in a separate thread
-countdown_thread = threading.Thread(target=countdown_timer, args=(30,))
+countdown_thread = threading.Thread(target=countdown_timer, args=(20,))
 countdown_thread.start()
 
 try:
@@ -118,11 +123,13 @@ try:
                     name = name_div.text.strip()
                     phone_div = parent_div.find_element(By.CLASS_NAME, 'callcontent')
                     phone_number = phone_div.text.strip()
+                    address_div = parent_div.find_element(By.CLASS_NAME, 'resultbox_address')  # Updated to include address
+                    address = address_div.text.strip()
 
-                    if name and phone_number:
-                        file.write(f"Name: {name}\nPhone: {phone_number}\n\n")
+                    if name and phone_number and address:
+                        file.write(f"Name: {name}\nAddress: {address}\nPhone: {phone_number}\n\n")
                     else:
-                        print(f"Missing data in parent div {index}. Name: '{name}', Phone: '{phone_number}'")
+                        print(f"Missing data in parent div {index}. Name: '{name}', Address: '{address}', Phone: '{phone_number}'")
 
                 except Exception as e:
                     with open('error_log.txt', 'a', encoding='utf-8') as error_file:
@@ -134,6 +141,18 @@ except Exception as e:
     print(f"An unexpected error occurred: {str(e)}")
 
 finally:
+    # Print script completion message
     print("Script execution completed. Browser will remain open.")
+    
+    # Wait for 3 seconds
+    time.sleep(3)
+    
+    # Remove page_source.html and stop.txt files
+    if os.path.exists('page_source.html'):
+        os.remove('page_source.html')
+    if os.path.exists('stop.txt'):
+        os.remove('stop.txt')
+    
+    # Keep the browser open, looping indefinitely until manually closed
     while True:
-        time.sleep(10)  # Keep the browser open, looping indefinitely until manually closed.
+        time.sleep(10)

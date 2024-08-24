@@ -1,27 +1,40 @@
-Name: Sri Raghavendra Group Of Institutions
-Phone: 09054018520
-
-Name: ST MARY'S GROUP OF INSTITUTIONS
-Phone: 09724385757
-
-Name: Pvs First Grade College
-Phone: 07411596602
-
-Name: Don Bosco Degree College
-Phone: 09054940571
-
-Name: Sri Rama Para Medical Sciences
-Phone: 08460500848
-
-Name: Sjm Institute Of Technology
+Name: Srinivasa Colour Lab & Digital Studio
+Address: 24th Main Jp Nagar 2nd Phase, Bangalore
 Phone: Show Number
 
-Name: Basaveshwara Medical College & Hospital
+Name: VISHNU CINEMATOGRAPHY
+Address: Door No 2b Koramangala, Bangalore
+Phone: 09035020923
+
+Name: Wetafilms
+Address: First Floor Bommanahalli, Bangalore
+Phone: 07041479930
+
+Name: Siri Colour Lab
+Address: Bugle Rock Road Basavanagudi, Bangalore
 Phone: Show Number
 
-Name: Sjm College Of Pharmacy
+Name: Raj Digital Studio
+Address: Dodballapur Road Yelahanka, Bangalore
 Phone: Show Number
 
-Name: Basaveshwara Medical College
+Name: Chowdeshwari Digital Photography
+Address: Ramanjaneya Layout Marathahalli, Bangalore
+Phone: Show Number
+
+Name: Candid Clicks
+Address: 6th Cross Yelahanka New Town, Bangalore
+Phone: 09035237550
+
+Name: Foto India
+Address: Manuvana Vijayanagar, Bangalore
+Phone: 09980039861
+
+Name: Studio S J S
+Address: 36th Cross Road Rajajinagar, Bangalore
+Phone: 09740004628
+
+Name: E G K & Son
+Address: Shanthala Nagar, Bangalore
 Phone: Show Number
 
