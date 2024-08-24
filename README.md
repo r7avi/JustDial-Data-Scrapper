@@ -29,7 +29,7 @@ git clone https://github.com/your-username/your-repository.git
 cd your-repository
 
 
-### 2. Install Requirements
+**### 2. Install Requirements**
 
 pip install -r requirements.txt
 
@@ -37,7 +37,7 @@ or
 
 py pip install -r requirements.txt
 
-### 3. Install Chrome if not Installed
+**### 3. Install Chrome if not Installed**
 
 ### 2. Run Python Script
 
@@ -48,7 +48,7 @@ or
 py script.py
 
 
-### Explanation:
+**### Explanation:**
 - **Clone the Repository**: Users are guided on how to clone the repository.
 - **Virtual Environment**: Optional step for setting up a virtual environment to manage dependencies.
 - **Installation of Packages**: Instructions on how to install required packages using `requirements.txt`.
