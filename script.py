@@ -161,6 +161,8 @@ finally:
         os.remove('page_source.html')
     if os.path.exists('stop.txt'):
         os.remove('stop.txt')
+    if os.path.exists('error_log.txt'):
+        os.remove('error_log.txt')
     
     # Keep the browser open, looping indefinitely until manually closed
     while True:
