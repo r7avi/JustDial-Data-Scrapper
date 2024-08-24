@@ -2,7 +2,7 @@
 
 This script uses Selenium to scrape data from Justdial. It automates the process of opening a webpage, handling popups, scrolling, and extracting contact information, then saves the data into a CSV file.
 
-It currently scraps Name, Address and Phone numbers from given city and keyword
+It currently scrapes Name, Address, and Phone numbers from a given city and keyword.
 
 ## Features
 
@@ -23,12 +23,13 @@ Before running the script, make sure you have the following installed:
 
 1. **Clone or Download the Repository**
 
-   Clone the repository to your local machine or download the script file.
+   Clone the repository to your local machine or download the script file:
 
-   ```bash
-git clone https://github.com/r7avi/JustDial-Data-Scrapper.git
-cd Just Dail Scrapper
-pip install -r requirements.txt
+   ```sh
+   git clone https://github.com/r7avi/JustDial-Data-Scrapper.git
+   cd JustDial-Data-Scrapper
+   pip install -r requirements.txt
+
 
 
 ### Summary:
