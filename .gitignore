@@ -1,10 +1,12 @@
 # Ignore the Scrapped folder
 Scrapped/
+Clean Data/
 
 # Ignore the page_source.html file
 page_source.html
 stop.txt
 error_log.txt
+temp_url.txt
 
 # Python cache files
 __pycache__/

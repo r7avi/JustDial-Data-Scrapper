@@ -33,8 +33,26 @@ def get_url_input():
 
     return url
 
-# Get the URL input from the user
-url = get_url_input()
+def get_url_from_file(filename):
+    # Read the URL from the specified file
+    try:
+        with open(filename, 'r') as file:
+            url = file.readline().strip()
+            if url:
+                return url
+            else:
+                print(f"The file '{filename}' is empty. Exiting.")
+                exit()
+    except FileNotFoundError:
+        print(f"The file '{filename}' does not exist. Exiting.")
+        exit()
+
+# Get the URL from temp_url.txt if it exists
+if os.path.exists('temp_url.txt'):
+    url = get_url_from_file('temp_url.txt')
+else:
+    # Use the original URL fetching method if temp_url.txt does not exist
+    url = get_url_input()
 
 # Set up Chrome options
 chrome_options = Options()
