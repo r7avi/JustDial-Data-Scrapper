@@ -33,4 +33,5 @@ Before running the script, make sure you have the following installed:
 ## Screenshots 
 
    ![image](https://github.com/user-attachments/assets/db720fd4-a662-4571-bcca-44fe20f242aa)
+   ![image](https://github.com/user-attachments/assets/02af2345-6095-4a33-a229-ead54046abd5)
 
