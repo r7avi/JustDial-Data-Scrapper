@@ -2,6 +2,7 @@ import time
 import random
 import threading
 import os
+import csv
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
@@ -111,8 +112,16 @@ try:
         f.write(page_source)
     print("Page source saved to 'page_source.html'.")
 
-    # Find and save data
-    with open('contacts.txt', 'w', encoding='utf-8') as file:
+    # Ensure the 'Scrapped' folder exists
+    os.makedirs('Scrapped', exist_ok=True)
+
+    # Find and save data in CSV
+    csv_filename = os.path.join('Scrapped', f"{keyword}.csv")
+    with open(csv_filename, 'w', newline='', encoding='utf-8') as csvfile:
+        fieldnames = ['Name', 'Address', 'Phone']
+        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+
+        writer.writeheader()
         parent_divs = driver.find_elements(By.CLASS_NAME, 'resultbox_info')
         if not parent_divs:
             print("No parent divs found. Check the class name and page source.")
@@ -127,7 +136,7 @@ try:
                     address = address_div.text.strip()
 
                     if name and phone_number and address:
-                        file.write(f"Name: {name}\nAddress: {address}\nPhone: {phone_number}\n\n")
+                        writer.writerow({'Name': name, 'Address': address, 'Phone': phone_number})
                     else:
                         print(f"Missing data in parent div {index}. Name: '{name}', Address: '{address}', Phone: '{phone_number}'")
 
@@ -135,7 +144,7 @@ try:
                     with open('error_log.txt', 'a', encoding='utf-8') as error_file:
                         error_file.write(f"An error occurred in parent div {index}: {str(e)}\n")
 
-    print("Data extraction completed.")
+    print(f"Data extraction completed and saved to '{csv_filename}'.")
 
 except Exception as e:
     print(f"An unexpected error occurred: {str(e)}")
