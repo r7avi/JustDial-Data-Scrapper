@@ -20,40 +20,18 @@ These packages are listed in the `requirements.txt` file.
 
 ## Installation
 
-### 1. Clone the Repository 
+### 1. Clone the Repository and Install Requirements
 
-First, clone the repository to your local machine:
+First, clone the repository to your local machine and install the required packages:
 
 ```sh
 git clone https://github.com/your-username/your-repository.git
 cd your-repository
-
-
-**### 2. Install Requirements**
-
 pip install -r requirements.txt
 
-or
 
-py pip install -r requirements.txt
+### Summary:
+- **Installation Instructions**: Consolidated into a single step that includes cloning the repository and installing the requirements.
+- **Execution**: Clear, concise instructions for running the script.
 
-**### 3. Install Chrome if not Installed**
-
-### 2. Run Python Script
-
-python script.py
-
-or
-
-py script.py
-
-
-**### Explanation:**
-- **Clone the Repository**: Users are guided on how to clone the repository.
-- **Virtual Environment**: Optional step for setting up a virtual environment to manage dependencies.
-- **Installation of Packages**: Instructions on how to install required packages using `requirements.txt`.
-- **Running the Script**: Users are guided on how to execute the script and what to expect in terms of output files.
-- **Important Notes & Troubleshooting**: Provided details on how the stop mechanism works, how to handle potential issues, and reminders for legal considerations.
-
-This `README.md` is comprehensive, covering everything a user would need to get the script up and running. Make sure to replace placeholder text like `your-username` and `your-repository` with your actual GitHub username and repository name.
-
+This approach keeps the `README.md` streamlined and user-friendly.
