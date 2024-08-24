@@ -39,8 +39,8 @@ def check_and_click_close_popup(driver):
             close_popup_button.click()
             print("Clicked 'jd_modal_close' button.")
             return True
-    except Exception as e:
-        print(f"Error checking or clicking close popup button: {str(e)}")
+    except:
+        pass  # Silence the exception and avoid printing the error message
     return False
 
 def countdown_timer(seconds):
@@ -53,7 +53,7 @@ def countdown_timer(seconds):
         f.write('')
 
 # Start the countdown timer in a separate thread
-countdown_thread = threading.Thread(target=countdown_timer, args=(600,))
+countdown_thread = threading.Thread(target=countdown_timer, args=(30,))
 countdown_thread.start()
 
 try:
@@ -73,7 +73,7 @@ try:
         print(f"Maybe Later popup not found or failed to click: {str(e)}")
 
     # Function to perform smooth, human-like scrolling
-    def human_like_scroll(driver, max_scroll_attempts=1000, scroll_pause_range=(5, 10), stop_file='stop.txt'):
+    def human_like_scroll(driver, max_scroll_attempts=5, scroll_pause_range=(1, 3), stop_file='stop.txt'):
         last_height = driver.execute_script("return document.body.scrollHeight")
         scroll_attempts = 0
         
