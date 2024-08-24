@@ -31,7 +31,6 @@ Before running the script, make sure you have the following installed:
    pip install -r requirements.txt
 
 
-
 ### Summary:
 - **Installation Instructions**: Consolidated into a single step that includes cloning the repository and installing the requirements.
 - **Execution**: Clear, concise instructions for running the script.
