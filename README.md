@@ -28,6 +28,9 @@ Before running the script, make sure you have the following installed:
    cd JustDial-Data-Scrapper
    pip install -r requirements.txt
 
+## NOTE :
+Please Request Issue if you need any Upgrades or Feature, Iam happy to Fix or Add feature. & New Ideas welcome
+
 ## Screenshots 
 
    ![image](https://github.com/user-attachments/assets/db720fd4-a662-4571-bcca-44fe20f242aa)
